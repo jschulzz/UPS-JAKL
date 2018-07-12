@@ -4,10 +4,14 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 import { AppComponent } from './app.component';
+import { LoginComponentComponent } from './login-component/login-component.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponentComponent,
+    UserDashboardComponent
   ],
   imports: [
     BrowserModule,
