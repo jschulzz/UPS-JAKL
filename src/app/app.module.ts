@@ -13,8 +13,7 @@ import { MaintenanceComponent } from './maintenance/maintenance.component';
 import { WorkRequestBoxComponent } from './work-request-box/work-request-box.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { InventoryTableComponent } from './inventory-table/inventory-table.component';
-import { SignatureDialogComponent } from './signature-dialog/signature-dialog.component';
+import { PastRequestsComponent } from './past-requests/past-requests.component';
 
 @NgModule({
   entryComponents: [SignatureDialogComponent],
@@ -38,9 +37,10 @@ import { SignatureDialogComponent } from './signature-dialog/signature-dialog.co
     UserDashboardComponent,
     MaintenanceComponent,
     WorkRequestBoxComponent,
-    SidenavComponent,
+    PastRequestsComponent
     InventoryTableComponent,
     SignatureDialogComponent
+    SidenavComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

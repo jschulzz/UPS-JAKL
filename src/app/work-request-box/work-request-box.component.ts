@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+//import{_transitions.scss }  from '@angular/core';
+//import { CdkAccordionItem } from '@angular/cdk/accordion';
 
 @Component({
   selector: 'app-work-request-box',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./work-request-box.component.css']
 })
 export class WorkRequestBoxComponent implements OnInit {
-
+  
   constructor() { }
+  // toggleAccordion() : void {
+  //   this.toggle();
+  // }
 
   ngOnInit() {
+
+
   }
 
 }
