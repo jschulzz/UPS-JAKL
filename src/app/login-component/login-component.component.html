@@ -1,0 +1,30 @@
+
+
+<div class="card">
+    <div class="card-header orange-gradient login-header lighten-1 white-text">
+        <div class="row d-flex justify-content-left align-items-end">
+            <h1 class="white-text mb-3 pt-3 font-weight-bold">Log in</h1>
+          </div>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="cardForm">  
+        <div class="md-form">
+          <i class="fa fa-user prefix grey-text"></i>
+          <input type="text" id="materialFormCardNameEx" formControlName="materialFormCardNameEx" class="form-control" mdbInputDirective>
+          <label for="materialFormCardNameEx" class="font-weight-light">Gems Id</label>
+        </div>
+  
+        <div class="md-form">
+          <i class="fa fa-lock prefix grey-text"></i>
+          <input type="password" id="materialFormCardPasswordEx" formControlName="materialFormCardPasswordEx" class="form-control"
+            mdbInputDirective>
+          <label for="materialFormCardPasswordEx" class="font-weight-light">Password</label>
+        </div>
+  
+        <div class="text-center py-4 mt-3">
+          <button class="btn secondary-color waves-light" type="submit" mdbWavesEffect>Submit</button>
+        </div>
+      </form>
+  
+    </div>
+  </div>

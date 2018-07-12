@@ -3,6 +3,8 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppComponent } from './app.component';
+import { LoginComponentComponent } from './login-component/login-component.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { MaintenanceComponent } from './maintenance/maintenance.component';
 import { WorkRequestBoxComponent } from './work-request-box/work-request-box.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
@@ -13,6 +15,16 @@ import { AngularSignaturePadModule } from '../../node_modules/angular-signature-
   declarations: [AppComponent, MaintenanceComponent, WorkRequestBoxComponent, SidenavComponent],
   imports: [BrowserModule, MDBBootstrapModule.forRoot(), AppRoutingModule, AngularSignaturePadModule],
   schemas: [NO_ERRORS_SCHEMA],
+  declarations: [
+    AppComponent,
+    LoginComponentComponent,
+    UserDashboardComponent
+  ],
+  imports: [
+    BrowserModule,
+    MDBBootstrapModule.forRoot()
+  ],
+  schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })
