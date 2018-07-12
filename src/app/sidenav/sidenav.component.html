@@ -1,9 +1,9 @@
 <!--Navbar-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark mdb-color">
-
+<mdb-navbar SideClass="navbar navbar-expand-lg elegant-color">
+  <mdb-icon icon="camera-retro"></mdb-icon>
   <!-- Navbar brand -->
   <logo>
-    <a class="navbar-brand" routerLink="/">Check & Go</a>
+    <a class="navbar-brand white-text" routerLink="/"><mdb-icon icon="check-square-o" size="lg"></mdb-icon> Check & Go</a>
   </logo>
 
   <!-- Collapsible content -->
@@ -12,15 +12,15 @@
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a routerLink="" class="nav-link waves-light" mdbWavesEffect>Home
+        <a routerLink="" class="white-text nav-link waves-light" mdbWavesEffect> <mdb-icon icon="home" size="lg"></mdb-icon> Home
           <span class="sr-only">(current)</span>
         </a>
       </li>
       <li class="nav-item">
-        <a routerLink="/maintenence" class="nav-link waves-light" mdbWavesEffect>Mainenence</a>
+        <a routerLink="/maintenence" class="white-text nav-link waves-light" mdbWavesEffect><mdb-icon icon="wrench" size="lg"></mdb-icon> Mainenence</a>
       </li>
       <li class="nav-item pull-right">
-        <a routerLink="/login" class="nav-link waves-light" mdbWavesEffect>Logout</a>
+        <a routerLink="/login" class="white-text nav-link waves-light" mdbWavesEffect><mdb-icon icon="sign-out" size="lg"></mdb-icon> Logout</a>
       </li>
 
     </ul>
