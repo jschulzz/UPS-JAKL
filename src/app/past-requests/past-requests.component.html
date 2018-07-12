@@ -1,0 +1,55 @@
+<!--Accordion-->
+<h1>Past Requests: </h1>
+
+<div id="accordion">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link"(click)="test.toggle()" >
+                Work Order number: 67458    Status: Completed
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </button>
+            </h5>
+        </div>
+      
+        <div id="collapseOne" class="collapse show" [mdbCollapse]="isCollapsed" #test="bs-collapse">
+           <div class="card-body">
+                <p>Submitted by: John Schulz</p>
+                <p>Date Submitted: 7/12/18</p>
+                <p>Description: The horn needs to be replaced.</p>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+           <h5 class="mb-0">
+              <button class="btn btn-link collapsed" (click)="test2.toggle()">
+                Work Order Number: 094462 Status: Completed <i class="fa fa-check" aria-hidden="true"></i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" [mdbCollapse]="isCollapsed" #test2="bs-collapse">
+            <div class="card-body">
+                    <p>Submitted by: Kait Masden</p>
+                    <p>Date Submitted: 7/12/17</p>
+                    <p>Description: The engine won't start.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" (click)="test3.toggle()" >
+                Work Order Number: 85876 Status: Completed <i class="fa fa-check" aria-hidden="true"></i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" [mdbCollapse]="isCollapsed" #test3="bs-collapse">
+            <div class="card-body">
+                    <p>Submitted by: Alex Uncleback</p>
+                    <p>Date Submitted: 7/12/17</p>
+                    <p>Description: The spark plugs need to be replaced.</p>
+            </div>
+          </div>
+        </div>
+      </div>

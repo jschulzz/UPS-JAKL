@@ -1,21 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WorkRequestBoxComponent } from './work-request-box.component';
+import { PastRequestsComponent } from './past-requests.component';
 
-
-describe('WorkRequestBoxComponent', () => {
-  let component: WorkRequestBoxComponent;
-  let fixture: ComponentFixture<WorkRequestBoxComponent>;
+describe('PastRequestsComponent', () => {
+  let component: PastRequestsComponent;
+  let fixture: ComponentFixture<PastRequestsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WorkRequestBoxComponent ]
+      declarations: [ PastRequestsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WorkRequestBoxComponent);
+    fixture = TestBed.createComponent(PastRequestsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
