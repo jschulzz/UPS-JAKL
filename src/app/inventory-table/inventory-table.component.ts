@@ -15,7 +15,7 @@ export class InventoryTableComponent implements OnInit {
   log() {
     console.log('sfsf');
   }
-  public submittedSignature(event) {
+  public submittedSignature() {
     if (this.closing === 'save') {
       this.toastr.error('everything is broken', 'Major Error', {
         timeOut: 3000
