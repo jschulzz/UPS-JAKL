@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {MatDialog} from '@angular/material';
-// import{SignatureDialogComponent} from '../signature-dialog/signature-dialog.component';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-inventory-table',
@@ -8,13 +7,22 @@ import {MatDialog} from '@angular/material';
   styleUrls: ['./inventory-table.component.scss']
 })
 export class InventoryTableComponent implements OnInit {
+  closing = 'close';
+  constructor(private toastr: ToastrService) {}
 
-  constructor( public dialog: MatDialog) {
-  }
+  ngOnInit() {}
 
-  ngOnInit() {
+  log() {
+    console.log('sfsf');
   }
-// public openSignatureDia() {
-//   this.dialog.open(SignatureDialogComponent);
-//   }
+  public submittedSignature(event) {
+    if (this.closing === 'save') {
+      this.toastr.error('everything is broken', 'Major Error', {
+        timeOut: 3000
+      });
+    }
+  }
+  public isClosing(method) {
+    this.closing = method;
+  }
 }

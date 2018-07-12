@@ -1,62 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { AppMaterialModule } from '../app/app-material/app-material.module';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-// import { AngularSignaturePadModule } from '../../node_modules/angular-signature-pad/angular-signature-pad/angular-signature-pad.es5.js';
-import {
-  MatAutocompleteModule,
-  MatBadgeModule,
-  MatButtonModule,
-  MatBottomSheetModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-  MatStepperModule,
-  MatAccordion,
-} from '@angular/material';
+import { AngularSignaturePadModule } from '../../node_modules/angular-signature-pad/angular-signature-pad/angular-signature-pad.es5.js';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppComponent } from './app.component';
 import { InventoryTableComponent } from './inventory-table/inventory-table.component';
-// import { SignatureDialogComponent } from './signature-dialog/signature-dialog.component';
+import { SignatureDialogComponent } from './signature-dialog/signature-dialog.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    InventoryTableComponent,
-    // SignatureDialogComponent
-  ],
+  entryComponents: [SignatureDialogComponent],
+  declarations: [AppComponent, InventoryTableComponent, SignatureDialogComponent],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
+    AppMaterialModule,
     MDBBootstrapModule.forRoot(),
-    MatDialogModule,
-    // AngularSignaturePadModule.forRoot()
+    AngularSignaturePadModule.forRoot(),
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true
+    })
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { };
+export class AppModule {}
