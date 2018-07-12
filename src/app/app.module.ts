@@ -12,7 +12,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { AngularSignaturePadModule } from '../../node_modules/angular-signature-pad/angular-signature-pad/angular-signature-pad.es5.js';
 
 @NgModule({
-  imports: [BrowserModule, MDBBootstrapModule.forRoot(), AppRoutingModule, AngularSignaturePadModule],
+  imports: [BrowserModule, MDBBootstrapModule.forRoot(), AppRoutingModule, AngularSignaturePadModule.forRoot()],
   schemas: [NO_ERRORS_SCHEMA],
   declarations: [
     AppComponent,
@@ -20,8 +20,7 @@ import { AngularSignaturePadModule } from '../../node_modules/angular-signature-
     UserDashboardComponent,
     MaintenanceComponent,
     WorkRequestBoxComponent,
-    SidenavComponent
-  ],
+    SidenavComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })
