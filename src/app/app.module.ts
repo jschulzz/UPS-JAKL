@@ -4,6 +4,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AngularSignaturePadModule } from '../../node_modules/angular-signature-pad/angular-signature-pad/angular-signature-pad.es5.js';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
@@ -26,6 +27,8 @@ import { InventoryTableComponent } from './inventory-table/inventory-table.compo
     BrowserModule,
     AppMaterialModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     MDBBootstrapModule.forRoot(),
     AngularSignaturePadModule.forRoot()
   ],

@@ -22,8 +22,9 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">410591</th>
+              <tr *ngFor="let item of items" [ngClass]="item.class">
+                <th scope="row">
+                  {{item.id}}</th>
                 <td>
                   <input type="textbox" style="width:50px">
                 </td>
@@ -36,159 +37,7 @@
                 <td>
                   <textarea row="100" column="50"></textarea>
                 </td>
-                <td>Kait Masden</td>
-                <td>
-                  <button (click)="basicModal.show()" type="submit" class="btn btn-outline-warning waves-effect">Signature</button>
-                </td>
-              </tr>
-              <tr class="table-warning">
-                <th scope="row">876979</th>
-                <td>
-                  <input type="textbox" style="width:50px">
-                </td>
-                <td>
-                  <input type="checkbox" style="size: 30px">
-                </td>
-                <td>
-                  <input type="checkbox" style="size: 30px">
-                </td>
-                <td>
-                  <textarea row="100" column="50"></textarea>
-                </td>
-                <td>John Schulz</td>
-                <td>
-                  <button (click)="basicModal.show()" type="submit" class="btn btn-outline-warning waves-effect">Signature</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">654643</th>
-                <td>
-                  <input type="textbox" style="width:50px">
-                </td>
-                <td>
-                  <input type="checkbox" style="size: 30px">
-                </td>
-                <td>
-                  <input type="checkbox" style="size: 30px">
-                </td>
-                <td>
-                  <textarea row="100" column="50"></textarea>
-                </td>
-                <td>Laura Kristie</td>
-                <td>
-                  <button (click)="basicModal.show()" type="submit" class="btn btn-outline-warning waves-effect">Signature</button>
-                </td>
-              </tr>
-              <tr class="table-danger">
-                <th scope="row">432424</th>
-                <td>
-                  <input type="textbox" style="width:50px">
-                </td>
-                <td>
-                  <input type="checkbox" style="size: 30px">
-                </td>
-                <td>
-                  <input type="checkbox" style="size: 30px">
-                </td>
-                <td>
-                  <textarea row="100" column="50"></textarea>
-                </td>
-                <td>Alex Uncleback</td>
-                <td>
-                  <button (click)="basicModal.show()" type="submit" class="btn btn-outline-warning waves-effect">Signature</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">414561</th>
-                <td>
-                  <input type="textbox" style="width:50px">
-                </td>
-                <td>
-                  <input type="checkbox" style="size: 30px">
-                </td>
-                <td>
-                  <input type="checkbox" style="size: 30px">
-                </td>
-                <td>
-                  <textarea row="100" column="50"></textarea>
-                </td>
-                <td>David Leeds</td>
-                <td>
-                  <button (click)="basicModal.show()" type="submit" class="btn btn-outline-warning waves-effect">Signature</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">410591</th>
-                <td>
-                  <input type="textbox" style="width:50px">
-                </td>
-                <td>
-                  <input type="checkbox" style="size: 30px">
-                </td>
-                <td>
-                  <input type="checkbox" style="size: 30px">
-                </td>
-                <td>
-                  <textarea row="100" column="50"></textarea>
-                </td>
-                <td>Chuck McGinnis</td>
-                <td>
-                  <button (click)="basicModal.show()" type="submit" class="btn btn-outline-warning waves-effect">Signature</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">410591</th>
-                <td>
-                  <input type="textbox" style="width:50px">
-                </td>
-                <td>
-                  <input type="checkbox" style="size: 30px">
-                </td>
-                <td>
-                  <input type="checkbox" style="size: 30px">
-                </td>
-                <td>
-                  <textarea row="100" column="50"></textarea>
-                </td>
-                <td>Kurt Pitts</td>
-                <td>
-                  <button (click)="basicModal.show()" type="submit" class="btn btn-outline-warning waves-effect">Signature</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">410591</th>
-                <td>
-                  <input type="textbox" style="width:50px">
-                </td>
-                <td>
-                  <input type="checkbox" style="size: 30px">
-                </td>
-                <td>
-                  <input type="checkbox" style="size: 30px">
-                </td>
-                <td>
-                  <textarea row="100" column="50"></textarea>
-                </td>
-                <td>Joe Roads</td>
-                <td>
-                  <button (click)="basicModal.show()" type="submit" class="btn btn-outline-warning waves-effect">Signature</button>
-                </td>
-              </tr>
-              <tr class="table-warning">
-                <th scope="row">410591</th>
-                <td>
-                  <input type="textbox" style="width:50px">
-                </td>
-                <td>
-                  <input type="checkbox" style="size: 30px">
-                </td>
-                <td>
-                  <input type="checkbox" style="size: 30px">
-                </td>
-                <td>
-                  <textarea row="100" column="50"></textarea>
-                </td>
-                <td>Neil Jeff</td>
+                <td>{{item.name}}</td>
                 <td>
                   <button (click)="basicModal.show()" type="submit" class="btn btn-outline-warning waves-effect">Signature</button>
                 </td>
@@ -203,7 +52,7 @@
 </div>
 <div mdbModal #basicModal="mdb-modal" (onHidden)="submittedSignature($event)" class="modal fade" tabindex="-1" role="dialog"
   aria-labelledby="myBasicModalLabel" aria-hidden="true" [config]="{backdrop: false, ignoreBackdropClick: true}">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog signatureModal" role="document">
     <div class="modal-content">
       <div class="modal-header">
 

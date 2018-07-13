@@ -1,27 +1,25 @@
-
 <div class="card">
-    <div class="header pt-3 grey lighten-2">
-        <div class="row d-flex justify-content-start">
-            <h3 class="deep-grey-text mt-3 mb-4 pb-1 mx-5">Log in</h3>
-        </div>
-    </div>
-    <div class="card-body">
-      <form [formGroup]="cardForm">  
-        <div class="md-form">
-          <i class="fa fa-user prefix grey-text"></i>
-          <input type="text" id="materialFormCardNameEx" formControlName="materialFormCardNameEx" class="form-control" mdbInputDirective>
-          <label for="materialFormCardNameEx" class="font-weight-light">Gems Id</label>
-        </div>
-  
-        <div class="md-form">
-          <i class="fa fa-lock prefix grey-text"></i>
-          <input type="password" id="materialFormCardPasswordEx" formControlName="materialFormCardPasswordEx" class="form-control"
-            mdbInputDirective>
-          <label for="materialFormCardPasswordEx" class="font-weight-light">Password</label>
-        </div>
-        <div class="text-center py-4 mt-3">
-          <button class="btn white-text orange-gradient btn-block z-depth-2" type="submit" mdbWavesEffect>Submit</button>
-        </div>
-      </form>
+  <div class="header pt-3 grey lighten-2">
+    <div class="row d-flex justify-content-start">
+      <h3 class="deep-grey-text mt-3 mb-4 pb-1 mx-5">Log in</h3>
     </div>
   </div>
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit(cardForm)" #cardForm="ngForm" [formGroup]="myGroup">
+      <div class="md-form">
+        <i class="fa fa-user prefix grey-text"></i>
+        <input type="text" id="materialFormCardNameEx" formControlName="username" class="form-control" mdbInputDirective>
+        <label for="materialFormCardNameEx" class="font-weight-light">Gems Id</label>
+      </div>
+
+      <div class="md-form">
+        <i class="fa fa-lock prefix grey-text"></i>
+        <input type="password" id="materialFormCardPasswordEx" formControlName="password" class="form-control" mdbInputDirective>
+        <label for="materialFormCardPasswordEx" class="font-weight-light">Password</label>
+      </div>
+      <div class="text-center py-4 mt-3">
+        <button type="submit" class="btn white-text orange-gradient btn-block z-depth-2" mdbWavesEffect>Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
