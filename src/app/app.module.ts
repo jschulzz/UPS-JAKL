@@ -20,6 +20,9 @@ import { PastRequestsComponent } from './past-requests/past-requests.component';
 import { InventoryTableComponent } from './inventory-table/inventory-table.component';
 import { SignatureDialogComponent } from './signature-dialog/signature-dialog.component';
 import { ManagerViewComponent } from './manager-view/manager-view.component';
+import { VehicleHistoryComponent } from './vehicle-history/vehicle-history.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserList2Component } from './user-list2/user-list2.component';
 
 @NgModule({
   entryComponents: [SignatureDialogComponent],
@@ -47,6 +50,9 @@ import { ManagerViewComponent } from './manager-view/manager-view.component';
     UserDeckComponent,
     VehicleTableComponent,
     PreCheckListComponent,
+    VehicleHistoryComponent,
+    UserListComponent,
+    UserList2Component
     ManagerViewComponent
   ],
   providers: [],

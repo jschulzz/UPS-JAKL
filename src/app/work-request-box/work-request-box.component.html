@@ -1,12 +1,12 @@
 <!--Accordion-->
-<h1>Pending Requests: </h1>
+<h1>Current Requests: </h1>
 
 <div id="accordion">
     <div class="card">
-        <div class="card-header" id="headingOne">
+        <div class="card-header text-white bg-warning mb-3" id="headingOne">
             <h5 class="mb-0">
               <button class="btn btn-link collapsed1" (click)="test1.toggle()">
-                Work Order number: 67458     Status: Pending
+                Work Order number: <a class="font-weight-bold"> 67458 </a>      Status:  <a class="font-weight-bold"> Pending </a>
                 <i class="fa fa-clock-o" aria-hidden="true"></i>
               </button>
             </h5>
@@ -16,6 +16,7 @@
            <div class="card-body">
                 <p>Submitted by: John Schulz</p>
                 <p>Date Submitted: 7/12/18</p>
+                <p>Vehicle Type: Van</p>
                 <p>Description: The front right tire needs to be replaced.</p>
             </div>
         </div>
@@ -24,7 +25,7 @@
         <div class="card-header" id="headingTwo">
            <h5 class="mb-0">
               <button class="btn btn-link collapsed2"(click)="test2.toggle()">
-                Work Order Number: 890442   Status: Pending
+                Work Order Number:  <a class="font-weight-bold"> 890442 </a>   Status:  <a class="font-weight-bold"> Pending </a>
                 <i class="fa fa-clock-o" aria-hidden="true"></i>
               </button>
             </h5>
@@ -33,15 +34,16 @@
             <div class="card-body">
                     <p>Submitted by: Kait Masden</p>
                     <p>Date Submitted: 7/12/18</p>
+                    <p>Vehicle Type: Tug</p>
                     <p>Description: The spark plugs need to be replaced.</p>
             </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-header" id="headingThree">
+        <div class="card ">
+          <div class="card-header text-white bg-danger mb-3" id="headingThree">
             <h5 class="mb-0">
               <button class="btn btn-link collapsed3" (click)="test3.toggle()">
-                Work Order Number: 890903   Status: In Progress
+                Work Order Number:  <a class="font-weight-bold"> 890903 </a>   Status:  <a class="font-weight-bold"> In Progress </a>
                 <i class="fa fa-circle-thin" aria-hidden="true"></i>
               </button>
             </h5>
@@ -49,8 +51,9 @@
           <div class="c3" [mdbCollapse]="isCollapsed" #test3="bs-collapse" >
             <div class="card-body">
                     <p>Submitted by: Alex Uncleback</p>
+                    <p>Vehicle Type: Van</p>
                     <p>Date Submitted: 7/12/18</p>
-                    <p>Description: The AC is out.</p>
+                    <p>Description: The engine isn't starting.</p>
             </div>
           </div>
         </div>
