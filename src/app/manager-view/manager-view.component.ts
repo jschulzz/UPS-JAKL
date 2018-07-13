@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginStateService } from '../login-state.service';
 
 @Component({
   selector: 'app-manager-view',
@@ -17,10 +18,11 @@ export class ManagerViewComponent implements OnInit {
     'Kurt Pittman'
   ];
   warningIssues = ['Headlight Out', 'Taillight Out', 'Missing Lug Nut'];
-  errorIssues = ['No Seatbelt', 'Doesn\'t Start', 'Flat Tire'];
-  constructor() {}
+  errorIssues = ['No Seatbelt', "Doesn't Start", 'Flat Tire'];
+  constructor(private loginService: LoginStateService) {}
 
   ngOnInit() {
+    this.loginService.state.next('manager');
     for (let i = 0; i < 11; i++) {
       const assign = this.errorClass();
       this.items.push({

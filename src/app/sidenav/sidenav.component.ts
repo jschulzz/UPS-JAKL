@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild, Injectable } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LoginStateService } from '../login-state.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -6,7 +7,7 @@ import { Component, OnInit, ViewChild, Injectable } from '@angular/core';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
-  constructor() {}
+  constructor(public loginService: LoginStateService) {}
 
   ngOnInit() {}
 }
