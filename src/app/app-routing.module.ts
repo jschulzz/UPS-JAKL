@@ -4,14 +4,15 @@ import { WorkRequestBoxComponent } from './work-request-box/work-request-box.com
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { InventoryTableComponent } from './inventory-table/inventory-table.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { ManagerViewComponent } from './manager-view/manager-view.component';
 
 const routes: Routes = [
   { path: 'inventory', component: InventoryTableComponent },
   { path: 'maintenence', component: WorkRequestBoxComponent },
   { path: 'login', component: LoginComponentComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'user', component: UserDashboardComponent }
-  // { path: 'manager', component: ManagerViewComponent },
+  { path: 'user', component: UserDashboardComponent },
+  { path: 'manager', component: ManagerViewComponent }
   // { path: 'login', component: SidenavComponent }
 ];
 
