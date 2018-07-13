@@ -5,15 +5,17 @@ import { LoginComponentComponent } from './login-component/login-component.compo
 import { InventoryTableComponent } from './inventory-table/inventory-table.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { ManagerViewComponent } from './manager-view/manager-view.component';
+import { PreCheckListComponent } from './pre-check-list/pre-check-list.component';
 
 const routes: Routes = [
   { path: 'inventory', component: InventoryTableComponent },
   { path: 'maintenence', component: WorkRequestBoxComponent },
   { path: 'login', component: LoginComponentComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'admin', redirectTo: 'inventory', pathMatch: 'full' },
   { path: 'user', component: UserDashboardComponent },
-  { path: 'manager', component: ManagerViewComponent }
-  // { path: 'login', component: SidenavComponent }
+  { path: 'manager', component: ManagerViewComponent },
+  { path: 'pre-check', component: PreCheckListComponent }
 ];
 
 @NgModule({

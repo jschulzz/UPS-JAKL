@@ -4,14 +4,53 @@
   <!-- Navbar brand -->
   <logo>
     <a class="navbar-brand white-text" routerLink="/">
-      <mdb-icon icon="check-square-o" size="lg"></mdb-icon> Check & Go</a>
+      <mdb-icon icon="check-square-o" size="lg"></mdb-icon>Check & Go</a>
   </logo>
 
   <!-- Collapsible content -->
   <links>
 
-    <!-- Links -->
-    <ul class="navbar-nav mr-auto">
+    <!--  UserLinks -->
+    <ul class="navbar-nav mr-auto" *ngIf="loginService.state.value === 'user'">
+      <li class="nav-item active">
+        <a routerLink="/user" class="white-text nav-link waves-light" mdbWavesEffect>
+          <mdb-icon icon="home" size="lg"></mdb-icon> Dashboard
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/pre-check" class="white-text nav-link waves-light" mdbWavesEffect>
+          <mdb-icon icon="indent" size="lg"></mdb-icon> Pre-Check</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/pre-check" class="white-text nav-link waves-light" mdbWavesEffect>
+          <mdb-icon icon="outdent" size="lg"></mdb-icon> Post-Check</a>
+      </li>
+      <li class="nav-item pull-right">
+        <a routerLink="/login" class="white-text nav-link waves-light" mdbWavesEffect>
+          <mdb-icon icon="sign-out" size="lg"></mdb-icon> Logout</a>
+      </li>
+
+    </ul>
+    <!--  ManagerLinks -->
+    <ul class="navbar-nav mr-auto" *ngIf="loginService.state.value === 'manager'">
+      <li class="nav-item active">
+        <a routerLink="/manager" class="white-text nav-link waves-light" mdbWavesEffect>
+          <mdb-icon icon="home" size="lg"></mdb-icon> Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/maintenence" class="white-text nav-link waves-light" mdbWavesEffect>
+          <mdb-icon icon="wrench" size="lg"></mdb-icon> Mainenence</a>
+      </li>
+      <li class="nav-item pull-right">
+        <a routerLink="/login" class="white-text nav-link waves-light" mdbWavesEffect>
+          <mdb-icon icon="sign-out" size="lg"></mdb-icon> Logout</a>
+      </li>
+
+    </ul>
+
+    <!--  AdminLinks -->
+    <ul class="navbar-nav mr-auto" *ngIf="loginService.state.value === 'admin'">
       <li class="nav-item active">
         <a routerLink="/inventory" class="white-text nav-link waves-light" mdbWavesEffect>
           <mdb-icon icon="home" size="lg"></mdb-icon> Home
