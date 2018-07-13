@@ -5,8 +5,8 @@
     <div class="card">
         <div class="card-header" id="headingOne">
             <h5 class="mb-0">
-              <button class="btn btn-link"(click)="test.toggle()" >
-                Work Order number: 67458    Status: Completed
+              <button class="btn btn-link" (click)="test.toggle()" >
+                Work Order number:  <a class="font-weight-bold"> 67458 </a>    Status:  <a class="font-weight-bold"> Completed </a>
                 <i class="fa fa-check" aria-hidden="true"></i>
               </button>
             </h5>
@@ -15,6 +15,7 @@
         <div id="collapseOne" class="collapse show" [mdbCollapse]="isCollapsed" #test="bs-collapse">
            <div class="card-body">
                 <p>Submitted by: John Schulz</p>
+                <p>Vehicle Type: Van</p>
                 <p>Date Submitted: 7/12/18</p>
                 <p>Description: The horn needs to be replaced.</p>
             </div>
@@ -24,13 +25,14 @@
         <div class="card-header" id="headingTwo">
            <h5 class="mb-0">
               <button class="btn btn-link collapsed" (click)="test2.toggle()">
-                Work Order Number: 094462 Status: Completed <i class="fa fa-check" aria-hidden="true"></i>
+                Work Order Number:  <a class="font-weight-bold"> 094462 </a> Status:  <a class="font-weight-bold"> Completed </a> <i class="fa fa-check" aria-hidden="true"></i>
               </button>
             </h5>
           </div>
           <div id="collapseTwo" class="collapse" [mdbCollapse]="isCollapsed" #test2="bs-collapse">
             <div class="card-body">
                     <p>Submitted by: Kait Masden</p>
+                    <p>Vehicle Type: Van</p>
                     <p>Date Submitted: 7/12/17</p>
                     <p>Description: The engine won't start.</p>
             </div>
@@ -40,13 +42,14 @@
           <div class="card-header" id="headingThree">
             <h5 class="mb-0">
               <button class="btn btn-link collapsed" (click)="test3.toggle()" >
-                Work Order Number: 85876 Status: Completed <i class="fa fa-check" aria-hidden="true"></i>
+                Work Order Number:  <a class="font-weight-bold"> 85876 </a> Status:  <a class="font-weight-bold"> Completed </a> <i class="fa fa-check" aria-hidden="true"></i>
               </button>
             </h5>
           </div>
           <div id="collapseThree" class="collapse" [mdbCollapse]="isCollapsed" #test3="bs-collapse">
             <div class="card-body">
                     <p>Submitted by: Alex Uncleback</p>
+                    <p>Vehicle Type: Belt Loader</p>
                     <p>Date Submitted: 7/12/17</p>
                     <p>Description: The spark plugs need to be replaced.</p>
             </div>
