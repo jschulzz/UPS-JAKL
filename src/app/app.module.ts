@@ -16,8 +16,9 @@ import { UserDeckComponent } from './user-deck/user-deck.component';
 import { VehicleTableComponent } from './vehicle-table/vehicle-table.component';
 import { PreCheckListComponent } from './pre-check-list/pre-check-list.component';
 import { PastRequestsComponent } from './past-requests/past-requests.component';
-import { SignatureDialogComponent } from './signature-dialog/signature-dialog.component';
 import { InventoryTableComponent } from './inventory-table/inventory-table.component';
+import { SignatureDialogComponent } from './signature-dialog/signature-dialog.component';
+import { ManagerViewComponent } from './manager-view/manager-view.component';
 
 @NgModule({
   entryComponents: [SignatureDialogComponent],
@@ -42,7 +43,8 @@ import { InventoryTableComponent } from './inventory-table/inventory-table.compo
     SidenavComponent,
     UserDeckComponent,
     VehicleTableComponent,
-    PreCheckListComponent
+    PreCheckListComponent,
+    ManagerViewComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
