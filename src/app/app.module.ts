@@ -10,6 +10,9 @@ import { WorkRequestBoxComponent } from './work-request-box/work-request-box.com
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { AngularSignaturePadModule } from '../../node_modules/angular-signature-pad/angular-signature-pad/angular-signature-pad.es5.js';
+import { UserDeckComponent } from './user-deck/user-deck.component';
+import { VehicleTableComponent } from './vehicle-table/vehicle-table.component';
+import { PreCheckListComponent } from './pre-check-list/pre-check-list.component';
 
 @NgModule({
   imports: [BrowserModule, MDBBootstrapModule.forRoot(), AppRoutingModule, AngularSignaturePadModule.forRoot()],
@@ -20,7 +23,10 @@ import { AngularSignaturePadModule } from '../../node_modules/angular-signature-
     UserDashboardComponent,
     MaintenanceComponent,
     WorkRequestBoxComponent,
-    SidenavComponent ],
+    SidenavComponent,
+    UserDeckComponent,
+    VehicleTableComponent,
+    PreCheckListComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })
