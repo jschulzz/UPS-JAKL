@@ -14,6 +14,8 @@ import { WorkRequestBoxComponent } from './work-request-box/work-request-box.com
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { PastRequestsComponent } from './past-requests/past-requests.component';
+import { SignatureDialogComponent } from './signature-dialog/signature-dialog.component';
+import { InventoryTableComponent } from './inventory-table/inventory-table.component';
 
 @NgModule({
   entryComponents: [SignatureDialogComponent],
@@ -37,10 +39,10 @@ import { PastRequestsComponent } from './past-requests/past-requests.component';
     UserDashboardComponent,
     MaintenanceComponent,
     WorkRequestBoxComponent,
-    PastRequestsComponent
+    PastRequestsComponent,
     InventoryTableComponent,
-    SignatureDialogComponent
-    SidenavComponent,
+    SignatureDialogComponent,
+    SidenavComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
