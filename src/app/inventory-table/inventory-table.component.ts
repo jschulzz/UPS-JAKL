@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-inventory-table',
@@ -8,7 +7,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class InventoryTableComponent implements OnInit {
   closing = 'close';
-  constructor(private toastr: ToastrService) {}
+  constructor() {}
 
   ngOnInit() {}
 
@@ -17,9 +16,7 @@ export class InventoryTableComponent implements OnInit {
   }
   public submittedSignature() {
     if (this.closing === 'save') {
-      this.toastr.error('everything is broken', 'Major Error', {
-        timeOut: 3000
-      });
+      alert('Success');
     }
   }
   public isClosing(method) {

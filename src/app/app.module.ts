@@ -4,7 +4,6 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AngularSignaturePadModule } from '../../node_modules/angular-signature-pad/angular-signature-pad/angular-signature-pad.es5.js';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
 
 import { AppComponent } from './app.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
@@ -28,12 +27,7 @@ import { InventoryTableComponent } from './inventory-table/inventory-table.compo
     AppMaterialModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
-    AngularSignaturePadModule.forRoot(),
-    ToastrModule.forRoot({
-      timeOut: 10000,
-      positionClass: 'toast-bottom-right',
-      preventDuplicates: true
-    })
+    AngularSignaturePadModule.forRoot()
   ],
   schemas: [NO_ERRORS_SCHEMA],
   declarations: [
