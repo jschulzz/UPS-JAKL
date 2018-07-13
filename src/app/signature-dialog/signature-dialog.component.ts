@@ -6,6 +6,7 @@ import { Component, OnInit, Inject, ViewChild, ElementRef } from '@angular/core'
   styleUrls: ['./signature-dialog.component.scss']
 })
 export class SignatureDialogComponent implements OnInit {
+  @Input('manager') manager: boolean;
   constructor(private elementRef: ElementRef) {
     console.log(this.elementRef.nativeElement);
   }
