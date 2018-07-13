@@ -15,4 +15,7 @@ export class SignatureDialogComponent implements OnInit {
     canvas[0].width = 1200;
     console.log(this.elementRef.nativeElement.style); // .querySelector('.signature-pad-canvas').width = '800px';
   }
+  managerSumbitAlert(){
+    alert('Success');
+  }
 }
