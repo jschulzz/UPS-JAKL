@@ -52,7 +52,7 @@ import { UserList2Component } from './user-list2/user-list2.component';
     PreCheckListComponent,
     VehicleHistoryComponent,
     UserListComponent,
-    UserList2Component
+    UserList2Component,
     ManagerViewComponent
   ],
   providers: [],
