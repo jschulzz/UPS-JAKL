@@ -45,10 +45,11 @@ import { InventoryTableComponent } from './inventory-table/inventory-table.compo
     PastRequestsComponent,
     InventoryTableComponent,
     SignatureDialogComponent,
-    SidenavComponent
+    SidenavComponent,
     UserDeckComponent,
     VehicleTableComponent,
-    PreCheckListComponent ],
+    PreCheckListComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
